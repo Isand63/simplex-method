@@ -4,7 +4,7 @@ public class Main {
         double[] f = {-6,4,4};
 
         //базовое значение функции
-        double[] fb = {0,-f[1],-f[2],-f[3],0,0};
+        double[] fb = {0,-f[0],-f[1],-f[2],0,0};
 
         //стремление фукции к min или max || max = true min =false
         boolean MaxMin = false;
@@ -14,14 +14,21 @@ public class Main {
 
         //значения системы уравнения 2
         double[] x2={-3,2,4,-1,0,1};
-        
+
         //проверка на min max
         if (MaxMin == false){
-            if(fb[2]<=0 & fb[3]<=0 & fb[4]<=0 & fb[5]<=0 & fb[6]<=0){
-                System.out.println(baseF+" "+ base1+" "+base2);
+            if(fb[1]<=0 & fb[2]<=0 & fb[3]<=0 & fb[4]<=0 & fb[5]<=0){
+                System.out.println(fb[0]+" "+x1[0]+" "+x2[0]);
             }
             else{
-                double max = 
+                //нахождение максимума в строке f
+                double max =0;
+                for (int i = 0;i< fb.length;i++){
+                    if (fb[i]>max){
+                        max = fb[i];
+                    }
+                }
+                
             }
         }
     }

@@ -1,27 +1,27 @@
 public class Main {
     public static void main(String[] args) {
         //значения функции
-        double fx1 = -6; double fx2 = 4; double fx3 = 4;
+        double[] f = {-6,4,4};
 
         //базовое значение функции
-        double fbx1 = -fx1; double fbx2 = -fx2; double fbx3 = -fx3;
+        double[] fb = {0,-f[1],-f[2],-f[3],0,0};
 
         //стремление фукции к min или max || max = true min =false
         boolean MaxMin = false;
 
         //значения системы уравнения 1
-        double x11 =3; double x12 =1; double x13 =-1; double base1 =-2;
+        double[] x1 ={-2,3,1,-1,1,0};
 
         //значения системы уравнения 2
-        double x21 =2; double x22 =4; double x23 =-1; double base2 =-3;
-
-        //искусственные переменные
-        double x4 = 1; double x5 = 1; double baseF = 0;
-
+        double[] x2={-3,2,4,-1,0,1};
+        
         //проверка на min max
         if (MaxMin == false){
-            if(fbx1<=0 & fbx2<=0 & fbx3<=0){
-                
+            if(fb[2]<=0 & fb[3]<=0 & fb[4]<=0 & fb[5]<=0 & fb[6]<=0){
+                System.out.println(baseF+" "+ base1+" "+base2);
+            }
+            else{
+                double max = 
             }
         }
     }

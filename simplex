@@ -1,0 +1,28 @@
+public class Main {
+    public static void main(String[] args) {
+        //значения функции
+        double fx1 = -6; double fx2 = 4; double fx3 = 4;
+
+        //базовое значение функции
+        double fbx1 = -fx1; double fbx2 = -fx2; double fbx3 = -fx3;
+
+        //стремление фукции к min или max || max = true min =false
+        boolean MaxMin = false;
+
+        //значения системы уравнения 1
+        double x11 =3; double x12 =1; double x13 =-1; double base1 =-2;
+
+        //значения системы уравнения 2
+        double x21 =2; double x22 =4; double x23 =-1; double base2 =-3;
+
+        //искусственные переменные
+        double x4 = 1; double x5 = 1; double baseF = 0;
+
+        //проверка на min max
+        if (MaxMin == false){
+            if(fbx1<=0 & fbx2<=0 & fbx3<=0){
+                
+            }
+        }
+    }
+}

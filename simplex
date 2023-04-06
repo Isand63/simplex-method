@@ -5,30 +5,58 @@ public class Main {
 
         //базовое значение функции
         double[] fb = {0,-f[0],-f[1],-f[2],0,0};
+        double[] fb2 = {0,-f[0],-f[1],-f[2],0,0};
 
         //стремление фукции к min или max || max = true min =false
         boolean MaxMin = false;
 
         //значения системы уравнения 1
         double[] x1 ={-2,3,1,-1,1,0};
-
+        double[] x12 ={-2,3,1,-1,1,0};
         //значения системы уравнения 2
         double[] x2={-3,2,4,-1,0,1};
-
+        double[] x22={-3,2,4,-1,0,1};
         //проверка на min max
         if (MaxMin == false){
             if(fb[1]<=0 & fb[2]<=0 & fb[3]<=0 & fb[4]<=0 & fb[5]<=0){
                 System.out.println(fb[0]+" "+x1[0]+" "+x2[0]);
             }
             else{
-                //нахождение максимума в строке f
                 double max =0;
+                int positionVert = 0;
+                int positionGor = 0;
+                double razdelitel = 0;
+
+                //нахождение максимума в строке f
                 for (int i = 0;i< fb.length;i++){
                     if (fb[i]>max){
                         max = fb[i];
+                        positionVert = i;
                     }
                 }
-                
+
+                //оценочный столбец
+                double ocen1 = Math.abs(x1[0])/Math.abs(x1[positionVert]);
+                double ocen2 = Math.abs(x2[0])/Math.abs(x2[positionVert]);
+
+                //сравнение где меньше и нахождение разделяющего элемента
+                if (ocen1<ocen2){
+                    razdelitel = x1[positionVert];
+                    positionGor = 1;
+                }
+                else {
+                    razdelitel = x2[positionVert];
+                    positionGor = 2;
+                }
+
+                //формирование второй таблицы со стройкой где был найден разделяющий элемент
+                if (positionGor ==1){
+                    x12[0]/=razdelitel; x12[1]/=razdelitel; x12[2]/=razdelitel; x12[3]/=razdelitel; x12[4]/=razdelitel; x12[5]/=razdelitel;
+                    
+                }
+                else {
+                    x22[0]/=razdelitel; x22[1]/=razdelitel; x22[2]/=razdelitel; x22[3]/=razdelitel; x22[4]/=razdelitel; x22[5]/=razdelitel;
+                }
             }
         }
     }

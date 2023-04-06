@@ -23,9 +23,12 @@ public class Main {
             }
             else{
                 double max =0;
+                double razdelitel = 0;
+
+                //нужно для вычислений позиции цифры и количеству циклов
                 int positionVert = 0;
                 int positionGor = 0;
-                double razdelitel = 0;
+                int rotate = 0;
 
                 //нахождение максимума в строке f
                 for (int i = 0;i< fb.length;i++){
@@ -56,6 +59,7 @@ public class Main {
                 }
                 else {
                     x22[0]/=razdelitel; x22[1]/=razdelitel; x22[2]/=razdelitel; x22[3]/=razdelitel; x22[4]/=razdelitel; x22[5]/=razdelitel;
+
                 }
             }
         }
